@@ -359,19 +359,7 @@
     font-weight: bold;
 }
 
-/* Styling for the 'Read More' button */
-.read-more-btn {
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-}
 
-.read-more-btn:hover {
-    background-color: #0056b3;
-}
 
 /* Mobile-specific styles */
 @media (max-width: 767px) {
