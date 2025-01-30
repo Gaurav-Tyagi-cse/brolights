@@ -248,114 +248,55 @@
 
 /*  */
 
-/* Gallery Section Styling */
-#gallery {
-    background-color: #f4f4f4; /* Light background for the gallery */
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-/* Gallery Heading */
-.gallery-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 2px solid #b83d39;
-    padding-bottom: 10px;
-}
-
-/* Gallery Item Styling (Fixed size for each card) */
-.gallery-item {
-    position: relative;
+.gallery-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-}
-
-/* Ensure Image fits the card */
-.gallery-item img {
-    width: 100%; /* Ensure the image fills the width of the card */
-    height: 100%; /* Ensure the image fills the height of the card */
-    object-fit: contain; /* Ensures the image fits fully inside the card without cropping */
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-}
-
-/* Hover Effect on Gallery Item */
-.gallery-item:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-}
-
-/* Overlay for Image Description */
-.gallery-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Dark background */
-    color: white;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease; /* Smooth fade-in */
-    border-radius: 10px;
-}
-
-/* Text inside Overlay */
-.gallery-item .overlay p {
-    font-size: 1.2rem;
-    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    
 }
-
-/* Show Overlay on Hover */
-.gallery-item:hover .overlay {
-    opacity: 1; /* Make the overlay visible */
+.gallery-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-/* Image Zoom Animation on Hover */
-.gallery-item:hover img {
-    transform: scale(1.1); /* Slight zoom effect on the image */
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-}
-
-/* Mobile Layout (2 images per row) */
-@media (max-width: 768px) {
-    .col-sm-6 {
-        width: 50%; /* 2 images per row on small screens */
-    }
-    .gallery-item {
-        height: auto; /* Remove fixed height for mobile so the image can adjust */
-    }
-}
-
-/* Desktop Layout (4 images per row) */
-@media (min-width: 768px) {
-    .col-md-3 {
-        width: 25%; /* 4 images per row on large screens */
-    }
-    .gallery-item {
-        height: 300px; /* Fixed height for desktop view */
-    }
-}
-
-/* Modal Image Styling */
-#imageModal .modal-body {
-    text-align: center;
-}
-
-#modalImage {
+.gallery-img {
     width: 100%;
-    max-height: 80vh; /* Limit the height to 80% of the viewport height */
-    object-fit: contain; /* Ensure the image fits within the modal without being cropped */
+    height: 200px;
+    object-fit: contain;
+    cursor: pointer;
 }
-
+.modal-body {
+    position: relative;
+    text-align: center;
+}
+.modal-img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(255, 28, 28);
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(52, 51, 51);
+    padding: 10px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
 
 
 /*  */
@@ -381,88 +322,92 @@
     text-align: center; /* Centering the main heading */
 }
 
-/* Styling for Video Cards */
+/* Ensure video cards have the same size with equal padding, bottom margin, and hover effect */
 .video-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    height: 300px; /* Fixed height for all video cards */
-    background-color: #fff;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-}
-
-/* Ensure Video is Fully Contained */
-.video-card iframe {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
-    object-fit: cover; /* Fill the card without stretching */
+    padding: 15px 20px; /* Same padding on left and right */
+    margin-bottom: 30px; /* Adds margin to the bottom of each video card for spacing */
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Rounded corners for the card */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the card */
 }
 
-
-
-/* Heading above the video (centered with style) */
-.video-heading-top {
-    font-size: 1.4rem;
-    font-weight: bold;
-   
-    text-align: center; /* Center heading above video */
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Arial', sans-serif;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for heading */
-}
-
-/* Heading inside Video Card */
-.video-card .card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center; /* Center the title inside the card */
-}
-
-
-
-/* Hover Effect on Video Cards */
+/* Hover effect for the video card */
 .video-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: translateY(-5px); /* Slightly lift the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
-/* Mobile Layout (1 card per row) */
-@media (max-width: 768px) {
-    .col-md-4 {
-        width: 100%; /* Full width for small screens */
-    }
+/* Fixed size for videos */
+.video-iframe {
+    width: 100%;
+    height: 200px; /* You can adjust the height as per your need */
+    border-radius: 8px;
+}
+
+/* Optional: Ensure the video heading style is consistent */
+.video-heading-top {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Styling for the 'Read More' button */
+.read-more-btn {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    /* Center the video cards in mobile view */
     .video-card {
-        height: auto; /* Adjust video card height for mobile */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px; /* Smaller bottom margin for mobile */
+        width: 90%; /* Make the video cards slightly smaller on mobile */
+    }
+
+    /* Ensure the row layout is stacked vertically */
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Optional: Adjust the video size in mobile view */
+    .video-iframe {
+        height: 180px; /* Slightly smaller video height for mobile */
+    }
+
+    /* Optional: Adjust heading size for mobile */
+    .video-heading-top {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust the 'Read More' button for mobile */
+    .read-more-btn {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
-/* Desktop Layout (3 cards per row) */
-@media (min-width: 768px) {
-    .col-md-4 {
-        width: 33.33%; /* 3 cards per row on larger screens */
-    }
-    .video-card {
-        height: 300px; /* Fixed height for video cards */
-    }
-}
-
-/* Animation for Heading */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* Footer */

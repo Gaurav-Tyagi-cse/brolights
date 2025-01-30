@@ -175,92 +175,67 @@
     
 <!-- Gallary Section -->
 
-    <section id="gallery" class="container py-5">
-        <h2 class="text-center mb-4 gallery-heading">Latest Gallery</h2>
-        <div class="row">
-            <!-- Gallery Item 1 -->
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre1.jpeg')">
-                    <img src="./images/pre1.jpeg" class="img-fluid" alt="Gallery 1">
-                    <div class="overlay">
-                        <p>Image Description 1</p>
-                    </div>
-                </div>
+<section id="gallery" class="container py-5">
+    <h2 class="text-center mb-4 services-heading">Latest Gallery</h2>
+    <div class="row">
+        <!-- Gallery Items -->
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(0)">
+                <img src="./images/pre1.jpeg" class="gallery-img" alt="Gallery 1">
             </div>
-            
-            <!-- Gallery Item 2 -->
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pod3.jpeg')">
-                    <img src="./images/img18.jpeg" class="img-fluid" alt="Gallery 2">
-                    <div class="overlay">
-                        <p>Image Description 2</p>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Gallery Item 3 -->
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre13.jpeg')">
-                    <img src="./images/pre13.jpeg" class="img-fluid" alt="Gallery 3">
-                    <div class="overlay">
-                        <p>Image Description 3</p>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Gallery Item 4 -->
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre17.jpeg')">
-                    <img src="./images/pre17.jpeg" class="img-fluid" alt="Gallery 4">
-                    <div class="overlay">
-                        <p>Image Description 4</p>
-                    </div>
-                </div>
-            </div>
-
-              <!-- Gallery Item 5 -->
-              <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre11.jpeg')">
-                    <img src="./images/pre11.jpeg" class="img-fluid" alt="Gallery 1">
-                    <div class="overlay">
-                        <p>Image Description 5</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Gallery Item 6 -->
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre16.jpeg')">
-                    <img src="./images/pre16.jpeg" class="img-fluid" alt="Gallery 2">
-                    <div class="overlay">
-                        <p>Image Description 2</p>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Gallery Item 7 -->
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/img7.jpg')">
-                    <img src="./images/img7.jpg" class="img-fluid" alt="Gallery 3">
-                    <div class="overlay">
-                        <p>Image Description 7</p>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Gallery Item 8 -->
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/img11.jpg')">
-                    <img src="./images/img11.jpg" class="img-fluid" alt="Gallery 4">
-                    <div class="overlay">
-                        <p>Image Description 8</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Add more gallery items as needed -->
         </div>
-    </section>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(1)">
+                <img src="./images/img18.jpeg" class="gallery-img" alt="Gallery 2">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(2)">
+                <img src="./images/pre13.jpeg" class="gallery-img" alt="Gallery 3">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(3)">
+                <img src="./images/pre17.jpeg" class="gallery-img" alt="Gallery 4">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(4)">
+                <img src="./images/pre11.jpeg" class="gallery-img" alt="Gallery 5">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(5)">
+                <img src="./images/pre16.jpeg" class="gallery-img" alt="Gallery 6">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(6)">
+                <img src="./images/img7.jpg" class="gallery-img" alt="Gallery 7">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="gallery-card" onclick="openModal(7)">
+                <img src="./images/img11.jpg" class="gallery-img" alt="Gallery 8">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Image View -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" class="img-fluid modal-img" alt="Full Screen Image">
+                <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+                <a class="next" onclick="changeImage(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Video Section -->
     <section id="video-gallery" class="container py-5">
@@ -268,20 +243,20 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="video-card">
-                    <h5 class="video-heading-top">Podcast video Shoot</h5> <!-- Heading above the video -->
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h5 class="video-heading-top">Podcast video Shoot</h5>
+                    <iframe class="video-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="video-card">
-                    <h5 class="video-heading-top"><i>Wedding video shoot</i></h5> <!-- Heading above the video -->
-                    <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h5 class="video-heading-top"><i>Wedding video shoot</i></h5>
+                    <iframe class="video-iframe" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="video-card">
-                    <h5 class="video-heading-top">Pre-Wedding video shoot</h5> <!-- Heading above the video -->
-                    <iframe src="https://www.youtube.com/embed/lY3JYkE9kmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h5 class="video-heading-top">Pre-Wedding video shoot</h5>
+                    <iframe class="video-iframe" src="https://www.youtube.com/embed/lY3JYkE9kmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -296,17 +271,6 @@
     
     
     
-    <!-- image full screen View  -->
-    <!-- Modal for Image View -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img id="modalImage" class="img-fluid" alt="Full Screen Image">
-                </div>
-            </div>
-        </div>
-    </div>
     
     
    
