@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brolight Production</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .carousel-item img { height: 500px; object-fit: cover; width: 100%; }
+        .about img { max-width: 100%; border-radius: 10px; }
+        .services .card { transition: transform 0.3s ease-in-out; }
+        .services .card:hover { transform: scale(1.05); }
+        .social-icons a { color: white; margin: 0 10px; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo2.png" alt="BROLIGHT PRODUCTION Logo" style="height: 50px; width: auto;">
+            </a>
+            
+            <div class="d-flex">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="hero">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-overlay">
+                        <h1 class="typed-text" style=" background: linear-gradient(90deg, #FFD700, #FF8C00); 
+                        -webkit-background-clip: text; 
+                        color: transparent; ">BROLIGHT PRODUCTION</h1>
+                    </div>
+                    <img src="./images/carousel-bg.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-overlay">
+                        <h1 class="typed-text">BROLIGHT PRODUCTION</h1>
+                    </div>
+                    <img src="images/carousel-bg.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-overlay">
+                        <h1 class="typed-text">BROLIGHT PRODUCTION</h1>
+                    </div>
+                    <img src="images/carousel-bg2.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <section id="about" class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3><b><i>Welcome To The Brolight Production</i></b></h3>
+                <p>We are a Film Company, capturing emotions since over a decade with our team of highly experienced team of Photographers and Cinematographers.</p>
+                <p>We are a premium film company with over ten years of experience. Our team of skilled photographers and cinematographers captures beautiful moments. Based in Noida with 7 years of local experience, we provide all your photography needs, from destination pre-wedding shoots to photo booth setups, all in one place.</p>
+                <!-- Read More Button -->
+                <a href="#more-info" class="read-more-btn">Read More</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="./images/about.webp" style="width: 100%;" alt="About Us">
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="services" class="container py-5">
+        <h2 class="text-center mb-4 services-heading">Our Services </h2>
+        <p class="text-center  services-heading">Please have a look below to know more <br>about our services</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-img-container">
+                        <img src="./images/pre-new2.jpg" class="card-img-top" alt="Service 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b><i>Pre-Wedding Shoot</i></b></h5>
+                        <p class="card-text">"Capturing timeless moments and love stories through a lens-your perfect prewedding photoshoot."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-img-container">
+                        <img src="./images/Maternity.webp" class="card-img-top" alt="Service 2">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Maternity Photoshoot</h5>
+                        <p class="card-text">"Celebrating the beauty of motherhood with a heartfelt maternity photoshoot."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-img-container">
+                        <img src="./images/podcastt.jpeg" class="card-img-top" alt="Service 3">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Podcast Shoot</h5>
+                        <p class="card-text">"Capturing the essence of your podcast with engaging and professional photoshoots."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-img-container">
+                        <img src="./images/eve-new.jpeg" class="card-img-top" alt="Service 3">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Event Photoshoot</h5>
+                        <p class="card-text">"Preserving the magic of your event with vibrant and memorable photography."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-img-container">
+                        <img src="./images/product.jpg" class="card-img-top" alt="Service 3">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Product Shoot</h5>
+                        <p class="card-text">"Showcasing your products with stunning, high-quality photography that speaks volumes."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-img-container">
+                        <img src="./images/model.webp" class="card-img-top" alt="Service 3">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Model Shoot</h5>
+                        <p class="card-text">"Highlighting elegance and style through captivating model photoshoots."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Gallary Section -->
+
+    <section id="gallery" class="container py-5">
+        <h2 class="text-center mb-4 gallery-heading">Latest Gallery</h2>
+        <div class="row">
+            <!-- Gallery Item 1 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre1.jpeg')">
+                    <img src="./images/pre1.jpeg" class="img-fluid" alt="Gallery 1">
+                    <div class="overlay">
+                        <p>Image Description 1</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pod3.jpeg')">
+                    <img src="./images/pod3.jpeg" class="img-fluid" alt="Gallery 2">
+                    <div class="overlay">
+                        <p>Image Description 2</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Gallery Item 3 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre13.jpeg')">
+                    <img src="./images/pre13.jpeg" class="img-fluid" alt="Gallery 3">
+                    <div class="overlay">
+                        <p>Image Description 3</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Gallery Item 4 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre17.jpeg')">
+                    <img src="./images/pre17.jpeg" class="img-fluid" alt="Gallery 4">
+                    <div class="overlay">
+                        <p>Image Description 4</p>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Gallery Item 5 -->
+              <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre11.jpeg')">
+                    <img src="./images/pre11.jpeg" class="img-fluid" alt="Gallery 1">
+                    <div class="overlay">
+                        <p>Image Description 5</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/pre16.jpeg')">
+                    <img src="./images/pre16.jpeg" class="img-fluid" alt="Gallery 2">
+                    <div class="overlay">
+                        <p>Image Description 2</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Gallery Item 7 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/img7.jpg')">
+                    <img src="./images/img7.jpg" class="img-fluid" alt="Gallery 3">
+                    <div class="overlay">
+                        <p>Image Description 7</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Gallery Item 8 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal('./images/img11.jpg')">
+                    <img src="./images/img11.jpg" class="img-fluid" alt="Gallery 4">
+                    <div class="overlay">
+                        <p>Image Description 8</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more gallery items as needed -->
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video-gallery" class="container py-5">
+        <h2 class="text-center mb-4 video-gallery-heading">Latest Video Gallery</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="video-card">
+                    <h5 class="video-heading-top">Podcast video Shoot</h5> <!-- Heading above the video -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-card">
+                    <h5 class="video-heading-top"><i>Wedding video shoot</i></h5> <!-- Heading above the video -->
+                    <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-card">
+                    <h5 class="video-heading-top">Pre-Wedding video shoot</h5> <!-- Heading above the video -->
+                    <iframe src="https://www.youtube.com/embed/lY3JYkE9kmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Centered View More Button -->
+        <div class="text-center mt-4">
+            <a href="#more-info" class="read-more-btn">Read More</a>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <!-- image full screen View  -->
+    <!-- Modal for Image View -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" class="img-fluid" alt="Full Screen Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+   
+    
+    
+    
+    
+    <footer class="custom-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo2.png" alt="Brolight Production Logo">
+                <p>We provide premium film services, capturing your special moments with expertise and creativity.</p>
+            </div>
+            <div class="footer-box">
+                <h3><i class="fas fa-cogs"></i> Services</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-video"></i> Commercial Ad Shoot</a></li>
+                    <li><a href="#"><i class="fas fa-film"></i> Shortfilm Shoot</a></li>
+                    <li><a href="#"><i class="fas fa-microphone"></i> Podcast Studio Rent</a></li>
+                    <li><a href="#"><i class="fas fa-music"></i> Music Shoot</a></li>
+                    <li><a href="#"><i class="fas fa-camera"></i> Model Shoot</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3><i class="fas fa-link"></i> Our Links</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> About Us</a></li>
+                    <li><a href="#"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="#"><i class="fas fa-briefcase"></i> Services</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-box gallery">
+                <img src="./images/flick1.jpeg" alt="Gallery Image">
+                <img src="./images/flick2.jpeg" alt="Gallery Image">
+                <img src="./images/flick3.jpg" alt="Gallery Image">
+                <img src="./images/flick4.jpeg" alt="Gallery Image">
+                <img src="./images/flick5.jpeg" alt="Gallery Image">
+                <img src="./images/flick6.jpeg" alt="Gallery Image">
+            </div>
+        </div>
+        <div class="contact-info">
+            <div><i class="fas fa-phone"></i> +91 7827460354</div>
+            <div><i class="fas fa-envelope"></i> brolightproduction@gmail.com</div>
+            
+            <div style="text-align: start;"><i class="fas fa-map-marker-alt"></i> Building no 159, A-block, Transport Nagar, Sector 69, Noida, U.P 201301</div> 
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Brolight Production. All rights reserved. Designed and Maintained by <a href="#" style="text-decoration: none; color: whitesmoke;">Bhoomi Techzone Pvt. Ltd</a>.
+        </div>
+    </footer>
+
+
+<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

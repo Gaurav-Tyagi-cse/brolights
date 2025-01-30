@@ -1,0 +1,569 @@
+#hero .carousel-item {
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: 90%; /* Ensure overlay width */
+    box-sizing: border-box;
+    z-index: 1; /* Ensure text appears on top */
+}
+
+/* Background color applied only to image area */
+.carousel-item img {
+    position: relative;
+    z-index: 0;
+}
+
+.typed-text {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent; /* Initially invisible cursor */
+    width: 0; /* Start with width 0 */
+    animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end ; /* Typing animation */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blinking effect only at the end */
+@keyframes blink {
+    0% {
+        border-color: transparent;
+    }
+    90% {
+        border-color: white;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+/* Prevents extra space after typing is complete */
+.typed-text {
+    animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end ;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .typed-text {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .carousel-overlay {
+        padding: 15px;
+        width: 95%; /* Ensure overlay width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .typed-text {
+        font-size: 24px; /* Further reduce font size for very small screens */
+    }
+
+    .carousel-overlay {
+        width: 100%; /* Ensure full width on small screens */
+    }
+}
+
+
+/* about */
+
+
+#about {
+    
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0px 4px 10px rgba(235, 14, 14, 0.1); /* Soft shadow for depth */
+    padding: 30px;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: whitesmoke; /* Ensure the title has white smoke color */
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8; /* Improve readability */
+    color: whitesmoke; /* Light text color */
+    text-align: justify; /* Justify text to align on both sides */
+    margin-bottom: 20px;
+    font-family: 'Helvetica', sans-serif; /* Elegant font */
+}
+
+.about-text i {
+    font-style: italic; /* Styling for the italicized portion of text */
+}
+
+.about-img {
+    width: 100%; /* Ensure image takes full width */
+    height: auto;
+    border-radius: 8px; /* Slight rounding of image corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow to give depth */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.about-img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* Read More Button Styling */
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: whitesmoke; /* Text color inside the button */
+    text-align: center;
+    background-color: #b83d39; /* Dark red background */
+    border: 2px solid #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover Animation for Button */
+.read-more-btn:hover {
+    background-color: #9d3e34; /* Lighter red background on hover */
+    color: white; /* Text color changes to white on hover */
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for hover effect */
+}
+
+
+
+
+
+
+
+/* Styling for the Services Section */
+#services {
+    background-color: #f8f9fa; /* Light background for the section */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Darker and Stylish Heading */
+.services-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Dark color for the heading */
+    text-transform: uppercase; /* Uppercase letters for more impact */
+    letter-spacing: 2px; /* Spacing between letters for a clean look */
+    border-bottom: 2px solid #b83d39; /* Add a red line at the bottom */
+    padding-bottom: 10px;
+}
+
+/* Card Styling */
+.service-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
+    border-radius: 10px; /* Slight rounding of the card corners */
+    overflow: hidden; /* Ensures that image and text stay within the card */
+    margin-bottom: 30px;
+}
+
+/* Image Container Styling */
+.card-img-container {
+    position: relative;
+    overflow: hidden; /* Prevents image from going out of bounds */
+}
+
+.service-card img {
+    width: 100%; /* Make the image take full width */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Hover Effect for Service Cards */
+.service-card:hover {
+    transform: translateY(-10px); /* Lift the card slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.service-card:hover img {
+    transform: scale(1.1); /* Zoom in the image */
+}
+
+/* Card Body Text Styling */
+.service-card .card-body {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background inside the card */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+}
+
+/* Card Title Styling */
+.service-card .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333; /* Dark color for the titles */
+    margin-bottom: 10px;
+}
+
+/* Card Text Styling */
+.service-card .card-text {
+    font-size: 1rem;
+    color: #555; /* Lighter color for description text */
+}
+
+
+
+
+
+
+
+/*  */
+
+/* Gallery Section Styling */
+#gallery {
+    background-color: #f4f4f4; /* Light background for the gallery */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Gallery Heading */
+.gallery-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #b83d39;
+    padding-bottom: 10px;
+}
+
+/* Gallery Item Styling (Fixed size for each card) */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Ensure Image fits the card */
+.gallery-item img {
+    width: 100%; /* Ensure the image fills the width of the card */
+    height: 100%; /* Ensure the image fills the height of the card */
+    object-fit: contain; /* Ensures the image fits fully inside the card without cropping */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Hover Effect on Gallery Item */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Overlay for Image Description */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark background */
+    color: white;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    border-radius: 10px;
+}
+
+/* Text inside Overlay */
+.gallery-item .overlay p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Show Overlay on Hover */
+.gallery-item:hover .overlay {
+    opacity: 1; /* Make the overlay visible */
+}
+
+/* Image Zoom Animation on Hover */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slight zoom effect on the image */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Mobile Layout (2 images per row) */
+@media (max-width: 768px) {
+    .col-sm-6 {
+        width: 50%; /* 2 images per row on small screens */
+    }
+    .gallery-item {
+        height: auto; /* Remove fixed height for mobile so the image can adjust */
+    }
+}
+
+/* Desktop Layout (4 images per row) */
+@media (min-width: 768px) {
+    .col-md-3 {
+        width: 25%; /* 4 images per row on large screens */
+    }
+    .gallery-item {
+        height: 300px; /* Fixed height for desktop view */
+    }
+}
+
+/* Modal Image Styling */
+#imageModal .modal-body {
+    text-align: center;
+}
+
+#modalImage {
+    width: 100%;
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    object-fit: contain; /* Ensure the image fits within the modal without being cropped */
+}
+
+
+
+/*  */
+
+/* Video Gallery Section */
+#video-gallery {
+    background-color: #f4f4f4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Video Gallery Heading */
+.video-gallery-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #b83d39; /* Underline with color */
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to heading */
+    animation: fadeIn 1s ease-in-out; /* Animation for heading */
+    text-align: center; /* Centering the main heading */
+}
+
+/* Styling for Video Cards */
+.video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 300px; /* Fixed height for all video cards */
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Ensure Video is Fully Contained */
+.video-card iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the card without stretching */
+}
+
+
+
+/* Heading above the video (centered with style) */
+.video-heading-top {
+    font-size: 1.4rem;
+    font-weight: bold;
+   
+    text-align: center; /* Center heading above video */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for heading */
+}
+
+/* Heading inside Video Card */
+.video-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Center the title inside the card */
+}
+
+
+
+/* Hover Effect on Video Cards */
+.video-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Mobile Layout (1 card per row) */
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%; /* Full width for small screens */
+    }
+    .video-card {
+        height: auto; /* Adjust video card height for mobile */
+    }
+}
+
+/* Desktop Layout (3 cards per row) */
+@media (min-width: 768px) {
+    .col-md-4 {
+        width: 33.33%; /* 3 cards per row on larger screens */
+    }
+    .video-card {
+        height: 300px; /* Fixed height for video cards */
+    }
+}
+
+/* Animation for Heading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Footer */
+
+.custom-footer {
+    background-color: #111;
+    position: relative;
+    color: white;
+    padding: 40px 20px;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: left;
+}
+.footer-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.footer-box h3 i {
+    margin-right: 10px;
+    color: #f39c12;
+}
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-box ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+.footer-box ul li a i {
+    margin-right: 10px;
+    color: #f39c12;
+}
+.footer-box ul li a:hover {
+    color: #f39c12;
+    padding-left: 5px;
+}
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: #f39c12;
+    transform: scale(1.2);
+}
+.footer-logo {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+.footer-logo img {
+    width: 150px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contact-info div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+.copyright {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-logo {
+        text-align: center;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-info {
+        flex-direction: column;
+    }
+}
