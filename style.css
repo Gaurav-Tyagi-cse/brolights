@@ -153,13 +153,9 @@
 
 
 
-
-
-
-
 /* Styling for the Services Section */
 #services {
-    background-color: #f8f9fa; /* Light background for the section */
+    background-color: #f8f9fa;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -168,68 +164,84 @@
 .services-heading {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #333; /* Dark color for the heading */
-    text-transform: uppercase; /* Uppercase letters for more impact */
-    letter-spacing: 2px; /* Spacing between letters for a clean look */
-    border-bottom: 2px solid #b83d39; /* Add a red line at the bottom */
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #b83d39;
     padding-bottom: 10px;
 }
 
 /* Card Styling */
 .service-card {
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
-    border-radius: 10px; /* Slight rounding of the card corners */
-    overflow: hidden; /* Ensures that image and text stay within the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
     margin-bottom: 30px;
+    height: 100%; /* Cards ki height fix karne ke liye */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Image Container Styling */
 .card-img-container {
-    position: relative;
-    overflow: hidden; /* Prevents image from going out of bounds */
+    width: 100%;
+    height: 250px; /* Fix image height */
+    overflow: hidden;
 }
 
 .service-card img {
-    width: 100%; /* Make the image take full width */
-    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fit nicely */
+    transition: transform 0.3s ease;
 }
 
-/* Hover Effect for Service Cards */
-.service-card:hover {
-    transform: translateY(-10px); /* Lift the card slightly */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-}
-
-.service-card:hover img {
-    transform: scale(1.1); /* Zoom in the image */
-}
-
-/* Card Body Text Styling */
+/* Card Body Styling */
 .service-card .card-body {
+    flex-grow: 1; /* Body ko flexible banane ke liye */
     padding: 20px;
     text-align: center;
-    background-color: #ffffff; /* White background inside the card */
-    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Content ko evenly space dene ke liye */
 }
 
 /* Card Title Styling */
 .service-card .card-title {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #333; /* Dark color for the titles */
+    color: #333;
     margin-bottom: 10px;
 }
 
 /* Card Text Styling */
 .service-card .card-text {
     font-size: 1rem;
-    color: #555; /* Lighter color for description text */
+    color: #555;
 }
 
+/* Hover Effect for Service Cards */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
+.service-card:hover img {
+    transform: scale(1.1);
+}
 
+/* Equal height for all cards */
+.row .col-md-4 {
+    display: flex;
+}
+
+.service-card {
+    flex: 1; /* Cards ko equal size dene ke liye */
+}
 
 
 
