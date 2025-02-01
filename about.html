@@ -98,27 +98,182 @@
         margin: 0;
     }
     </style>
+
+    <!-- navbar -->
+<style>
+     .navbar {
+        background: transparent; /* Default transparent */
+        transition: background 0.4s ease-in-out;
+    }
+
+    .nav-link{
+        color: #ffffff;
+    }
+
+    .navbar.scrolled {
+        background: rgba(0, 0, 0, 0.8); /* Scroll hone ke baad color */
+    }
+
+    /* Social Icons */
+    .social-icons {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        display: flex;
+        gap: 15px;
+        z-index: 10;
+    }
+
+    .social-link {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+
+    .icon-bg {
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    .social-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Hover Effect */
+    .social-link:hover .icon-bg {
+        transform: scaleX(1.2) translateX(5px);
+    }
+
+    
+       
+
+        /* Dropdown Styling */
+.dropdown-menu {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.dropdown-item {
+    color: black;
+}
+
+.dropdown-item:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
+        /* Mobile Mode - Social Icons Bottom Par */
+        @media (max-width: 768px) {
+            .social-icons {
+                top: auto;
+                bottom: 20px;
+                right: 50%;
+                transform: translateX(50%);
+                gap: 10px;
+            }
+    
+            .social-link {
+                width: 40px;
+                height: 40px;
+            }
+    
+            .social-link img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+    
+    /* Default Hide in Mobile */
+@media (max-width: 991px) {
+    .social-icons {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: transparent;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .social-icons.show-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 19px;
+    }
+
+    .social-icons a .icon-bg {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: white;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover .icon-bg {
+        transform: scale(1.2) translateX(10px);
+    }
+}
+
+</style>
+
+
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./images/logo2.png" alt="BROLIGHT PRODUCTION Logo" style="height: 50px; width: auto;">
             </a>
-            <div class="d-flex">
-                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-            </div>
+    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            
+                    <!-- Gallery Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown">
+                            Gallery
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                            <li><a class="dropdown-item" href="#">Photo</a></li>
+                            <li><a class="dropdown-item" href="#">Video</a></li>
+                        </ul>
+                    </li>
+            
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
+            </div>
+            
+    
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-link">
+                    <div class="icon-bg"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook"></div>
+                </a>
+                <a href="#" class="social-link">
+                    <div class="icon-bg"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></div>
+                </a>
             </div>
         </div>
     </nav>
@@ -166,56 +321,87 @@
         </div>
     </section>
     
-    <footer class="custom-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/logo2.png" alt="Brolight Production Logo">
-                <p>We provide premium film services, capturing your special moments with expertise and creativity.</p>
+    <footer style="background-color: #0a0a0a; color: white; padding: 50px 5%; font-family: 'Poppins', sans-serif; font-size: 16px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+            <div style="max-width: 300px;">
+                <h2 style="color: rgb(192, 239, 247); font-weight: 700;">BROLIGHT PRODUCTION</h2>
+                <p style="line-height: 1.6;">We provide premium film services, capturing your special moments with expertise and creativity.</p>
             </div>
-            <div class="footer-box">
-                <h3><i class="fas fa-cogs"></i> Services</h3>
-                <ul>
-                    <li><a href="#"><i class="fas fa-video"></i> Commercial Ad Shoot</a></li>
-                    <li><a href="#"><i class="fas fa-film"></i> Shortfilm Shoot</a></li>
-                    <li><a href="#"><i class="fas fa-microphone"></i> Podcast Studio Rent</a></li>
-                    <li><a href="#"><i class="fas fa-music"></i> Music Shoot</a></li>
-                    <li><a href="#"><i class="fas fa-camera"></i> Model Shoot</a></li>
-                </ul>
-            </div>
-            <div class="footer-box">
-                <h3><i class="fas fa-link"></i> Our Links</h3>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html"><i class="fas fa-user"></i> About Us</a></li>
-                    <li><a href="#"><i class="fas fa-images"></i> Gallery</a></li>
-                    <li><a href="#"><i class="fas fa-briefcase"></i> Services</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-box gallery">
-                <img src="./images/flick1.jpeg" alt="Gallery Image">
-                <img src="./images/flick2.jpeg" alt="Gallery Image">
-                <img src="./images/flick3.jpg" alt="Gallery Image">
-                <img src="./images/flick4.jpeg" alt="Gallery Image">
-                <img src="./images/flick5.jpeg" alt="Gallery Image">
-                <img src="./images/flick6.jpeg" alt="Gallery Image">
-            </div>
-        </div>
-        <div class="contact-info">
-            <div><i class="fas fa-phone"></i> +91 7827460354</div>
-            <div><i class="fas fa-envelope"></i> brolightproduction@gmail.com</div>
             
-            <div style="text-align: start;"><i class="fas fa-map-marker-alt"></i> Building no 159, A-block, Transport Nagar, Sector 69, Noida, U.P 201301</div> 
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div>
+                <h3 style="color: rgb(192, 239, 247); font-weight: 600;">Services</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li>Commercial Ad Shoot</li>
+                    <li>Shortfilm Shoot</li>
+                    <li>Podcast Studio Shoot On Rent</li>
+                    <li>Music Shoot</li>
+                    <li>Model Shoot</li>
+                    <li>More Services...</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 style="color: rgb(192, 239, 247); font-style: 16px;">Our Links</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Images</li>
+                    <li>Videos</li>
+                    <li>Services</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 style="color: rgb(192, 239, 247); font-weight: 600;">Gallery</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                    <img src="./images/flick1.jpeg" alt="Gallery Image" width="90" height="90" style="border-radius: 8px;">
+                    <img src="./images/flick2.jpeg" alt="Gallery Image" width="90" height="90" style="border-radius: 8px;">
+                    <img src="./images/flick3.jpg" alt="Gallery Image" width="90" height="90" style="border-radius: 8px;">
+                    <img src="./images/flick4.jpeg" alt="Gallery Image" width="90" height="90" style="border-radius: 8px;">
+                    <img src="./images/flick5.jpeg" alt="Gallery Image" width="90" height="90" style="border-radius: 8px;">
+                    <img src="./images/flick6.jpeg" alt="Gallery Image" width="90" height="90" style="border-radius: 8px;">
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2024 Brolight Production. All rights reserved. Designed and Maintained by <a href="#" style="text-decoration: none; color: whitesmoke;">Bhoomi Techzone Pvt. Ltd</a>.
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 40px; gap: 30px;">
+            <div style="display: flex; align-items: center; gap: 15px; text-align: left;">
+                <i class="fas fa-phone" style="font-size: 40px; color: rgb(192, 239, 247);"></i>
+                <div>
+                    <p style="font-weight: 600; margin: 0;">Call us now</p>
+                    <p style="margin: 0;">+91 7827460354</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 15px; text-align: left;">
+                <i class="fas fa-envelope" style="font-size: 40px; color: rgb(192, 239, 247);"></i>
+                <div>
+                    <p style="font-weight: 600; margin: 0;">Email Address</p>
+                    <p style="margin: 0;">brolightproduction@gmail.com</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 15px; text-align: left;">
+                <i class="fas fa-map-marker-alt" style="font-size: 40px; color: rgb(192, 239, 247);"></i>
+                <div>
+                    <p style="font-weight: 600; margin: 0;">Location</p>
+                    <p style="margin: 0;">Building no 159, A-block,<br>Transport Nagar, Sector 69,<br>Noida, U.P 201301</p>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h3 style="color: rgb(192, 239, 247); font-weight: 600; margin: 0;">Social Icons</h3>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#"><i class="fab fa-facebook" style="font-size: 40px; color: rgb(192, 239, 247);"></i></a>
+                    <a href="#"><i class="fab fa-instagram" style="font-size: 40px; color: rgb(192, 239, 247);"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div style="text-align: start; margin-top: 40px; border-top: 1px solid gray; padding-top: 20px;">
+            <p>&copy; 2024 Brolight Production. All rights reserved. Designed and Maintained by <strong style="color: rgb(192, 239, 247);">Bhoomi Techzone Pvt. Ltd.</strong></p>
         </div>
     </footer>
-
+<script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

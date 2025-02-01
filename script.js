@@ -37,3 +37,27 @@ function changeImage(step) {
     }
     document.getElementById("modalImage").src = images[currentIndex];
 }
+
+
+
+window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 5) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+
+// 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".navbar-toggler");
+    const socialIcons = document.querySelector(".social-icons");
+
+    toggleButton.addEventListener("click", function () {
+        socialIcons.classList.toggle("show-icons");
+    });
+});
+

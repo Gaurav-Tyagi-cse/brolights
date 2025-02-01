@@ -2,98 +2,19 @@
     position: relative;
 }
 
-.carousel-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    width: 90%; /* Ensure overlay width */
-    box-sizing: border-box;
-    z-index: 1; /* Ensure text appears on top */
+#h3,p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-/* Background color applied only to image area */
-.carousel-item img {
-    position: relative;
-    z-index: 0;
-}
-
-.typed-text {
-    color: white;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid transparent; /* Initially invisible cursor */
-    width: 0; /* Start with width 0 */
-    animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end ; /* Typing animation */
-}
-
-/* Typing animation */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-/* Cursor blinking effect only at the end */
-@keyframes blink {
-    0% {
-        border-color: transparent;
-    }
-    90% {
-        border-color: white;
-    }
-    100% {
-        border-color: transparent;
-    }
-}
-
-/* Prevents extra space after typing is complete */
-.typed-text {
-    animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end ;
-}
-
-/* Responsive typography */
-@media (max-width: 768px) {
-    .typed-text {
-        font-size: 28px; /* Adjust font size for smaller screens */
-    }
-
-    .carousel-overlay {
-        padding: 15px;
-        width: 95%; /* Ensure overlay width on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .typed-text {
-        font-size: 24px; /* Further reduce font size for very small screens */
-    }
-
-    .carousel-overlay {
-        width: 100%; /* Ensure full width on small screens */
-    }
-}
-
 
 /* about */
 
 
-#about {
+#about-img {
     
     border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 0px 4px 10px rgba(235, 14, 14, 0.1); /* Soft shadow for depth */
-    padding: 30px;
 }
+
 
 .about-title {
     font-size: 2rem;
